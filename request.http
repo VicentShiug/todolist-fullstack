@@ -1,0 +1,16 @@
+GET http://localhost:3333/tasks
+Content-Type: application/json
+
+###
+
+POST http://localhost:3333/tasks
+Content-Type: application/json
+
+{
+  "title": ""
+}
+
+###
+
+DELETE http://localhost:3333/tasks/
+Content-Type: application/json
