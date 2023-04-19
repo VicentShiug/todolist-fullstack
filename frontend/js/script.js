@@ -42,6 +42,7 @@ const updateTask = async (task) => {
     body: JSON.stringify({ title, status })
   })
 
+  console.log(status)
   loadTasks()
 }
 
@@ -97,7 +98,15 @@ const createRow = (task) => {
 
   editInput.value = title
   editForm.appendChild(editInput)
-
+  if (status == 'concluida') {
+    tr.style.backgroundColor = 'rgba(000, 100, 19, 0.5)'
+  }
+  if (status == 'pendente') {
+    tr.style.backgroundColor = 'rgba(255, 140, 0, 0.5)'
+  }
+  if (status == 'em andamento') {
+    tr.style.backgroundColor = 'rgba(000, 100, 200, 0.5)'
+  }
 
   editForm.addEventListener('submit', (event) => {
     event.preventDefault()
